@@ -11,9 +11,11 @@ hamburger.addEventListener('click', () =>{
         menu.classList.remove('showMenu');
         closeIcon.style.display = 'none';
         menuIcon.style.display = 'block';
+        hamburger.style.left= '1rem';
     }else{
         menu.classList.add('showMenu');
         closeIcon.style.display = 'block';
         menuIcon.style.display = 'none';
+        hamburger.style.left= '32%';
     }
 })
