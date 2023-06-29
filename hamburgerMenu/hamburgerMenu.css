@@ -1,0 +1,80 @@
+/* hamburger menu style */
+
+html{
+    font-size: 18px;
+}
+
+
+.hamburgerBtn{
+    width: 2rem;
+    height: auto;
+    /* position fixex, so scrolling wont affect it */
+    position: fixed;
+    /* z-index to make sure it stays above avery other element */
+    z-index: 100;
+    /* top and right, to add it to the top right corner */
+    top: 1rem;
+    left: 1rem;
+    color: black;
+    /* font-weight: 800; */
+    padding: 4px;
+    border: transparent;
+    background: white;
+    cursor: pointer;
+}
+
+/* To hide the close icon by default, add display: none; to the closeIcon class */
+.closeIcon {
+    display: none;
+    background-color: #e2c0b2;
+}
+.closeIcon:hover{
+    /* aumenta ou diminuiu */
+    transform: scale(1.5);
+}
+
+.menu {
+    text-align: center;
+    width: 40%;
+    position: fixed;
+    padding-bottom: 3rem;
+    line-height: 3rem;
+    /*  transfomr used to hide the menu by default */
+    /* y- sobe desce, x- direito e esquerdo */
+    /* menos e pra cima,estou subindo 100 */
+    transform: translateX(-100%);
+    /* used to animate the change in translation value and create a slide up/down effect */
+    transition: transform ease-in-out 0.5s;
+    top: 0;
+    /* left: 0; */
+    left: 0;
+    z-index: 99;
+    background: #e2c0b2;
+    color: white;
+    list-style: none;
+    padding-top: 4rem;
+}
+
+.menuItem{
+    color: black;
+    font-size: 1rem;
+    padding: 18px 0;
+    list-style: none;
+}
+
+.menuItem svg{
+    width: 1.5rem;
+    margin-left: 40px;
+    ;
+}
+
+
+/* This class below will be added and removed from the menu with Javascript to show and hide the menu. */
+
+.showMenu {
+    /* By resetting translateY to 0, the menu will slide down and cover the whole screen */
+    transform: translateX(0);
+}
+
+
+
