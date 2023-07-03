@@ -1,4 +1,5 @@
-
+//arquivo de fazer requisicao,
+//colocamos aqui todas as funcoes relacionadas ao fetch
 
 
 async function getAll(url) {
@@ -21,12 +22,13 @@ async function getAll(url) {
         return data
     }
 
-    // API
+//abaixo: faco um objeto, que tera duas funcoes, e ele eu exporto 
+//fica mais facil de enxergar a exportacao.
+//API, nao e so requisicao, API e um arquivo, site libera para os outros acessarem, como faz para acessar as coisas dentro do arquivo
+    // API publica desse arquivo
     const http = {
         getAll,
         getOne
-    }
-
-    
+    } 
     export default http
     

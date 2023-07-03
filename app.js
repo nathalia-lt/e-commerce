@@ -1,8 +1,9 @@
+// sem o curl brackets pq eu fiz o export default
 import products from './products/products.js';
 import http from './services/httpService.js'
 import testimonials from './testimonials/testimonials.js';
 
-console.log(http);
+console.log('http', http); //aqui eu vejo o que eu estou exportando do meu arquivo http, no caso o getAll ans getOne
 console.log(products);
 //App vai ser meu controlador. Responsavel por chamar os outros arquivos
 //fazendo fetch e chamando para renderizar
