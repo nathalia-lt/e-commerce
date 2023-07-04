@@ -4,7 +4,7 @@
     padding: 0;
 }
 html, body{
-    background-color: #e2c0b2;
+    background-color: #eeede8;
     width: 100%;
     min-height: 100vh;
 }
@@ -15,7 +15,7 @@ p{
 }
 
 .products-container{
-    min-width: 90%;
+    width: 90%;
     margin: 3rem auto;
     display: flex;
     justify-content: center;
@@ -26,24 +26,35 @@ p{
 
 /* como faco para deixar todos os cards do mesmo tamanho, mesmo em tela cheia. como centralizar a imagem */
 .women-card{
-    max-width: 40%;
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
     height: auto;
     border: 1px solid black;
     background-color: blueviolet;
     margin: 1rem;
     padding: 1rem;
     align-items: center;
+    gap: 2rem;
 }
-/* 
-.wrapper{
 
-} */
+.wrapper{
+    background-color: aliceblue;
+    padding-top: 0.5rem;
+    flex: 1;
+}
+
 
 img{
-    max-width: 60px;
-    text-align: center;
-    align-items: center;
+    width: 80px;
+    height: 100px;
+    object-fit: fill;
+    transition: 0.5s;
+}
 
+img:hover {
+    transform: rotate(10deg);
 }
 
 .title,
@@ -51,3 +62,22 @@ img{
 .price{
     text-align: center;
 }
+
+@media only screen and (min-width: 600px){
+    .women-card{
+        max-width: 280px;
+    }
+}
+
+/* divide pelo o numero de caets que eu quero que apareca na tela */
+@media only screen and (min-width: 1200px){
+    .women-card{
+        max-width: 380px;
+    }
+}
+
+/* @media only screen and (max-width: 1200px){
+    .women-card{
+        max-width: 380px;
+    }
+} */

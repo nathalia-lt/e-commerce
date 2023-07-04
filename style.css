@@ -42,8 +42,6 @@ h1{
     color: white;
 }
 
-
-
 .categories-container{
     display: flex;
 }
@@ -142,4 +140,22 @@ h1{
 
 .current-bullet{
     background-color: #e2c0b2;
+}
+
+/* cart button */
+
+.cart-icon{
+    width: 1.6rem;
+    color: black;
+}
+
+.cart-btn{
+    position: absolute;
+    right: 1%;
+    margin-top: 1.2rem;
+    margin-right: 0.5rem;
+    /* margin: 0.5rem; */
+    background: none;
+    border: none;
+    cursor: pointer;
 }
