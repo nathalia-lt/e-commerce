@@ -18,10 +18,12 @@ async function women(){
 
     function womenTemplate(womenProduct){
         return `<div class="women-card">
-        <img width="40px" src="${womenProduct.image}" alt='${womenProduct.name}' />
-        <p>${womenProduct.title}</p>
-        <p>${womenProduct.rating.rate} ⭐</p>
-        <p>$: ${womenProduct.price}</p>
+        <img src="${womenProduct.image}" alt='${womenProduct.name}' />
+        <div class="wrapper">
+        <p class="title">${womenProduct.title}</p>
+        <p class="rating">${womenProduct.rating.rate} ⭐</p>
+        <p class="price">$: ${womenProduct.price}</p>
+        </div>
     </div>`
     }
 
@@ -30,6 +32,9 @@ async function women(){
         womenClothes.forEach(product => {
             womenContainer.innerHTML += womenTemplate(product)
         });
+        //eu preciso colocar o settime out aqui?
+        //eu quero alterar o css do womemTemplate
+        setTimeout(womenRender, 50);
     }
 
 
