@@ -1,6 +1,8 @@
 //arquivo de fazer requisicao,
 //colocamos aqui todas as funcoes relacionadas ao fetch
 
+//busco no end point o json para objeto javascript.
+//json e um arquivo de texto simples e a funcao json transforma em js
 
 async function getAll(url) {
     // fetch(parametro1, parametro2)
