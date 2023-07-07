@@ -24,7 +24,7 @@ p{
 
 
 /* como faco para deixar todos os cards do mesmo tamanho, mesmo em tela cheia. como centralizar a imagem */
-.women-card{
+.jewelery-card{
     width: 100%;
     max-width: 300px;
     display: flex;
@@ -55,7 +55,6 @@ img:hover {
     transform: rotate(10deg);
 }
 
-.add-btn,
 .title,
 .rating,
 .price{

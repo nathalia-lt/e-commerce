@@ -16,11 +16,14 @@ async function accessories(){
 }
 
 function jeweleryTemplate(jeweleryProduct){
-    return `<div class="women-card">
+    return `<div class="jewelery-card">
     <img width="40px" src="${jeweleryProduct.image}" alt='${jeweleryProduct.name}' />
-    <p>${jeweleryProduct.title}</p>
-    <p>${jeweleryProduct.rating.rate} ⭐</p>
-    <p>$: ${jeweleryProduct.price}</p>
+    <div class="wrapper">
+    <p class="title">${jeweleryProduct.title}</p>
+    <p class="rating">${jeweleryProduct.rating.rate} ⭐</p>
+    <p class="price">$: ${jeweleryProduct.price}</p>
+    <button class="add-btn">Add to Cart</button>
+    </div>
 </div>`
 }
 
@@ -29,6 +32,7 @@ function jeweleryRender(jew){
     jew.forEach(product => {
         jeweleryContainer.innerHTML += jeweleryTemplate(product)
     });
+    setTimeout(jeweleryRender, 50);
 }
 
 accessories()

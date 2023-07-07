@@ -14,6 +14,10 @@ body{
 h1{
     padding-bottom: 2rem;
 }
+h2{
+    padding-top: 2rem;
+    text-align: center;
+}
 
 .header {
     min-height: 80px;
@@ -47,17 +51,29 @@ h1{
 }
 
 .products-container{
+    width: 90%;
+    margin: 3rem auto;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 .product-card{
     /* mobile firt mobile tem que ocupar 100%, nesse caso */
     width: 90%;
-    max-width: 300px;
+    max-width: 250px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
     margin: 1rem auto;
     padding: 0.5rem;
-    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: 1rem;
+    padding: 1rem;
+    align-items: center;
+    gap: 1rem;
+
 }
 
 .categories-container{
@@ -77,8 +93,11 @@ h1{
     padding: 0.3rem;
 }
 
-.category-card img{
-    width: 100px;
+img{
+    width: 80px;
+    height: 100px;
+    object-fit: fill;
+    transition: 0.5s;
 }
 
 .testimonials-container{

@@ -16,6 +16,8 @@ async function women(){
     }
 }
 
+
+//tenho que arrumar os dados do meu botao
     function womenTemplate(womenProduct){
         return `<div class="women-card">
         <img src="${womenProduct.image}" alt='${womenProduct.name}' />
@@ -23,9 +25,13 @@ async function women(){
         <p class="title">${womenProduct.title}</p>
         <p class="rating">${womenProduct.rating.rate} ⭐</p>
         <p class="price">$: ${womenProduct.price}</p>
+        <button class="add-btn">Add to Cart</button>
         </div>
     </div>`
     }
+
+    // <button id="${product.id}" class="add-btn" data-id="${product.id}   "data-image="${product.image}" data-title="${product.title}" data-price="${product.price}">Add to Cart
+    // </button>
 
     function womenRender(womenClothes){
         const womenContainer = document.getElementById('products-container')
@@ -40,8 +46,4 @@ async function women(){
 
 women()
 
-// const women = {
 
-// }
-
-// export default women

@@ -16,11 +16,14 @@ async function men(){
 }
 
 function menTemplate(menProduct){
-    return `<div class="women-card">
+    return `<div class="men-card">
     <img width="40px" src="${menProduct.image}" alt='${menProduct.name}' />
-    <p>${menProduct.title}</p>
-    <p>${menProduct.rating.rate} ⭐</p>
-    <p>$: ${menProduct.price}</p>
+    <div class="wrapper">
+    <p class="title">${menProduct.title}</p>
+    <p class="rating">${menProduct.rating.rate} ⭐</p>
+    <p class="price">$: ${menProduct.price}</p>
+    <button class="add-btn">Add to Cart</button>
+    </div>
 </div>`
 }
 
@@ -29,6 +32,7 @@ function menRender(menClothes){
     menClothes.forEach(product => {
         menContainer.innerHTML += menTemplate(product)
     });
+    setTimeout(menRender, 50)
 }
 
 men()
