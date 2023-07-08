@@ -1,5 +1,6 @@
 import http from "../services/httpService.js";
 import products from "../products/products.js";
+import cart from "../cart/cart-model.js";
 
 
 async function women(){
@@ -9,8 +10,8 @@ async function women(){
         //products.productsRender(womenProducts, false)
         // pq eu tive que colocar o womenProducts como parametro? da onde ele veio? 
         //ja devo ter perguntado mas pq tenho que chamar essa funcao aqui dentro?
-        womenRender(womenProducts, false)
         console.log(womenProducts)
+        womenRender(womenProducts, false)
     } catch (error) {
         console.log(error.message);
     }
@@ -18,29 +19,59 @@ async function women(){
 
 
 //tenho que arrumar os dados do meu botao
-    function womenTemplate(womenProduct){
+    function womenTemplate(product){
         return `<div class="women-card">
-        <img src="${womenProduct.image}" alt='${womenProduct.name}' />
+        <img src="${product.image}" alt='${product.name}' />
         <div class="wrapper">
-        <p class="title">${womenProduct.title}</p>
-        <p class="rating">${womenProduct.rating.rate} ⭐</p>
-        <p class="price">$: ${womenProduct.price}</p>
-        <button class="add-btn">Add to Cart</button>
+        <p class="title">${product.title}</p>
+        <p class="rating">${product.rating.rate} ⭐</p>
+        <p class="price">$: ${product.price}</p>
+        <button id="${product.id}" class="add-btn" data-id="${product.id}   "data-image="${product.image}" data-title="${product.title}" data-price="${product.price}">Add to Cart
+        </button>
         </div>
     </div>`
     }
 
-    // <button id="${product.id}" class="add-btn" data-id="${product.id}   "data-image="${product.image}" data-title="${product.title}" data-price="${product.price}">Add to Cart
-    // </button>
 
-    function womenRender(womenClothes){
+    function womenRender(womenProducts){
         const womenContainer = document.getElementById('products-container')
-        womenClothes.forEach(product => {
+        console.log(womenProducts)
+        womenProducts.forEach(product => {
             womenContainer.innerHTML += womenTemplate(product)
         });
         //eu preciso colocar o settime out aqui?
         //eu quero alterar o css do womemTemplate
-        setTimeout(womenRender, 50);
+        setTimeout(addEventListenerToBtn, 50);
+    }
+
+
+    function addEventListenerToBtn(){
+         //pego o nodelist dos meus botoes e adiciono em cada botao o evento.
+        const addBtns = document.querySelectorAll('.add-btn')
+        console.log(addBtns)
+        addBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // { } => estamos criando um objeto
+                // dataset => é um objeto que contem todos os atributos data-*
+                // ...dataset => estamos espalhando todos os atributos do objeto dataset
+                // id = ....
+                // image = ....
+                // title = ....
+                // price = ....
+                // {...dataset} => estamos criando um objeto com os atributos que estavam no dataset
+                // {
+                //     id: ....,
+                //     image: ....,
+                //     title: ....,
+                //     price: ....
+                // }
+
+
+                // [...dataset] => estamos criando um array com os atributos que foram espalhados a partir do dataset
+                console.log(btn.dataset)
+                cart.addItem({...btn.dataset})
+            })
+        })
     }
 
 

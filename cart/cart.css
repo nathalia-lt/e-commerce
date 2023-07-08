@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    background-color: #eeede8;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.products-container{
+    width: 90%;
+    margin: 3rem auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* como eu crio um css para essa pagina se eu estou usando os templates de outras paginas */
+
+
+
