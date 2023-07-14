@@ -9,4 +9,30 @@ body{
     width: 100%;
     min-height: 100vh;
     /* height: 100%; */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.about-container{
+    width: 90%;
+    margin: 3rem auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.structure-container{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+h1, h2{
+    text-align: center;
+    margin: 30px;
+}
+
+p{
+    text-align: center;
+    padding:10px
 }
