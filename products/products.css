@@ -98,15 +98,14 @@ img{
 
 /* mudar no media, display flex, no announcemtn max-widdth, flex 1, fetuare-wrapper flex 2 */
 .show-case-wrapper{
-    border: 2px solid black;
     width: 100%;
+    background-color: #e4e2d9;
     /* display:flex; */
 }
 
 .announcement{
     /* flex:1; */
     width: 100%;
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -134,13 +133,11 @@ img{
 
 .featured-wrapper{
     /* flex: 2; */
-    border: 2px solid red;
     display: flex;
     column-gap: 1rem;    
 }
 
 .featured-left-container {
-    border: 2px solid green;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -167,8 +164,6 @@ img{
     display: grid;
     min-width: 100%;
     height: auto;  
-    grid-template-columns: 2fr 2fr 3fr;
-    grid-template-rows: 2fr 1fr;
     justify-content: right;
 }
 
@@ -177,11 +172,15 @@ img{
     width: 45vw;
     max-width: 300px;
     height: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 .5rem #d3d3d3;
     /* height: 143px; */
 }
 
 .jewelery-category{
     height: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 .5rem #d3d3d3;
 }
 
 
@@ -208,4 +207,71 @@ img{
     background: rgb(6, 6, 29);
     color: #E89A43;
     outline: none;
+}
+
+/* divide pelo o numero de carts que eu quero que apareca na tela */
+@media only screen and (min-width: 600px){
+    .product-card{
+        width: 90%;
+        max-width: 250px;  
+        height: auto;
+    }
+    .show-case-wrapper{
+        width: 100%;
+        display:flex;
+        background-color: #e4e2d9;
+
+    }
+    .announcement{
+        flex:1;
+        width: 100%;
+        max-width: 250px;
+    }
+    .featured-wrapper{
+        flex: 2;
+        display: flex;
+        column-gap: 1rem;    
+    }
+    .announcement-title{
+        width: 50%;
+        border: none;
+        border-radius: 8px;
+        color: rgb(6, 6, 29);
+        background-color: #7FD1AE;
+        padding: 0.2rem;
+        text-align: center;
+    }
+    .announcement-subtitle{
+        color: rgb(6, 6, 29);
+        font-weight: 700;
+        letter-spacing: 1px;
+        padding-top: 1rem;
+        text-align: center;
+        line-height: 1.5;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    .show-case-wrapper{
+        width: 100%;
+        display:flex;
+        background-color: #e4e2d9;
+        /* margin: 5rem auto; */
+
+    }
+    .announcement{
+        flex:2;
+        width: 100%;
+        max-width: 380px;
+        margin-left: 4rem;
+    }
+    .featured-right-container {
+        flex-grow: 2;
+    }
+    .featured-left-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-left: 4rem;
+    }
 }

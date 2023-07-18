@@ -67,7 +67,7 @@ img:hover {
     }
 }
 
-/* divide pelo o numero de caets que eu quero que apareca na tela */
+/* divide pelo o numero de carts que eu quero que apareca na tela */
 @media only screen and (min-width: 1200px){
     .women-card{
         max-width: 380px;
