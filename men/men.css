@@ -25,17 +25,51 @@ p{
 
 /* como faco para deixar todos os cards do mesmo tamanho, mesmo em tela cheia. como centralizar a imagem */
 .men-card{
-    width: 100%;
-    max-width: 300px;
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    border: 1px solid black;
-    border-radius: 8px;
-    margin: 1rem;
-    padding: 1rem;
-    align-items: center;
-    gap: 2rem;
+            /* mobile firt mobile tem que ocupar 100%, nesse caso */
+            width: 90%;
+            /* max-width: 250px;  coloco esse no media query*/
+            max-width: 160px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            margin: 1rem auto;
+            padding: 0.5rem;
+            border: 1px solid #E89A43;
+            border-radius: 8px;
+            /* margin: 1rem; */
+            padding: 1rem;
+            align-items: center;
+            gap: 1rem;
+            overflow: hidden;
+}
+
+.add-btn{
+    margin: auto;
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    background: transparent;
+    border: 2px solid #E89A43;
+    box-shadow: 2px 2px 1px 1px #999;
+}
+.add-btn:active{
+    transform: scale(0.98);
+}
+
+.add-btn:hover{
+    background: #E89A43;
+    color: white;
+    outline: none;
+}
+
+
+.description{
+    font-size: 1rem;
+    font-weight: lighter;
+    line-height: 1.5;
+    flex-grow: 1;
 }
 
 .wrapper{
@@ -69,13 +103,13 @@ img:hover {
 
 /* divide pelo o numero de cards que eu quero que apareca na tela */
 @media only screen and (min-width: 1200px){
-    .women-card{
+    .men-card{
         max-width: 380px;
     }
 }
 
-/* @media only screen and (max-width: 1200px){
-    .women-card{
+@media only screen and (max-width: 1200px){
+    .men-card{
         max-width: 380px;
     }
-} */
+} 

@@ -66,6 +66,7 @@ img{
     padding: 1rem;
     align-items: center;
     gap: 1rem;
+    overflow: hidden;
 }
 
 .description{
@@ -194,18 +195,19 @@ img{
 .category-btn{
     padding: 0.3rem 0.8rem;
     border-radius: 5px;
-    background-color: #E89A43;
+    background-color: #ffff;
     color: rgb(6, 6, 29);
     border: 1px solid #E89A43;
     cursor: pointer;
     line-height: 1.15;
+    font-weight: lighter;
     text-decoration: none;
     box-shadow: 2px 2px 1px 1px #999;
 }
 
 .category-btn:hover{
-    background: rgb(6, 6, 29);
-    color: #E89A43;
+    background: #E89A43;
+    color: #ffff;
     outline: none;
 }
 

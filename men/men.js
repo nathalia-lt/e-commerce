@@ -19,7 +19,7 @@ function menTemplate(menProduct){
     return `<div class="men-card">
     <img width="40px" src="${menProduct.image}" alt='${menProduct.name}' />
     <div class="wrapper">
-    <p class="title">${menProduct.title}</p>
+    <p class="description">${menProduct.title}</p>
     <p class="rating">${menProduct.rating.rate} ⭐</p>
     <p class="price">$: ${menProduct.price}</p>
     <button class="add-btn">Add to Cart</button>
