@@ -1,3 +1,6 @@
+
+// quero tirar esses icons e colocar imagens
+
 const categoriesImages = [
     'https://img.icons8.com/?size=512&id=bwljt0Tfv3oe&format=png',
     'https://img.icons8.com/?size=512&id=100235&format=png',

@@ -8,6 +8,7 @@
     <!-- o link abaixo adiciona icons, por isso uso o fa no class, para ter acesso a esses links -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="products/products.css">
     <link rel="stylesheet" href="hamburgerMenu/hamburgerMenu.css">
     <title>e-commerce</title>
 </head>
@@ -52,11 +53,55 @@
         <section id="products-container"  class="products-container"></section>
         
         <!-- cards -->
+        <section class="show-case-wrapper">
+            <div id="announcement" class="announcement">
+                <p class="announcement-title">Special</p>
+                <p class="announcement-subtitle">
+                    Check our new collection out!!
+                </p>
+            </div>
+        <!-- quero substituir os icons por essas imagens, tenho que colocar dentro do categories section -->
+
+            <div class="featured-wrapper">
+                <div class="featured-left-container">
+                    <div class="featured-category">
+                        <figure class="category" >
+                            <img class="featured-img" src="./images/men.jpg" alt="man image">
+                        </figure>
+                        <div class="category-btn-wrapper">
+                            <a href="/men" class="category-btn">Men</a>
+                        </div>
+                    </div>
+                    <div class="category">
+                        <figure class="women-category" >
+                            <img class="featured-img" src="./images/women.jpg" alt="woman image">
+                        </figure>
+                        <div class="category-btn-wrapper">
+                            <a href="/women/" class="category-btn">Women</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="featured-right-container">
+                    <div class="category">
+                        <figure class="jewelery-category" >
+                            <img class="featured-img" src="./images/jewelery.jpg" alt="jewelery image">
+                        </figure>
+                        <div class="category-btn-wrapper">
+                            <a href="/accessories" class="category-btn">Accessories</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section> <!-- end of cards -->
+
+
         <section id="categories-container" class="categories-container">
 
         </section>
         <!--  -->
         <h2>What Our Customers Say</h2>
+        <div class="underline"></div>
         <section id="bullets-container" class="bullets-container">
             
         </section>

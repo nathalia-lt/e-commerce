@@ -17,7 +17,7 @@ import categoriesImages from './data.js'
     function categoryTemplate(category, index) {
         return `
         <div class='category-card'>
-        <img src="${categoriesImages[index]}" alt='${category}'/>
+        <img class="img-category" src="${categoriesImages[index]}" alt='${category}'/>
         <h3>${category}</h3>
         </div>
         `
@@ -58,7 +58,7 @@ import categoriesImages from './data.js'
         return`
         <div class="product-card">
             <img width="40px" src="${product.image}" alt='${product.title}' />
-            <p>${product.title}</p>
+            <p class="description">${product.title}</p>
             <p>$: ${product.price}</p>
             <button id="${product.id}" class="add-btn" data-id="${product.id}" data-image="${product.image}" data-title="${product.title}" data-price="${product.price}">Add to Cart
             </button>
