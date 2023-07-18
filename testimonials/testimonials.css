@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #eeede8;
+    width: 100%;
+    min-height: 100vh;
+    /* height: 100%; */
+    font-family: "Source Sans Pro",sans-serif;;
+}
+
+.testimonials-container{
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    min-height: 180px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.testimonials-container svg {
+    width: 30px;
+}
+
+.testimonial-card{
+    background-color: #e2c0b2;
+    font-weight: lighter;
+    border-radius: 10px;
+    padding: 1rem;
+    /* abosulte, ignore others elements */
+    /* makes them all stack on top of each other */
+    position: absolute;
+    top: 0; 
+    left: 0;
+    transition: all 1s;
+    align-items: center;
+}
+
+.underline{
+    width: 6rem;
+    height: 0.25rem;
+    background: black;
+    /* margin-top: 0.5rem; */
+    margin-left: auto;
+    margin-right: auto
+}
+
+
+.bullets-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.bullet {
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 0 0.5rem;
+    cursor: pointer;    
+}
+
+.current-bullet{
+    background-color: #e2c0b2;
+}
+
