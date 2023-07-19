@@ -26,6 +26,32 @@ body{
     text-align: center;
 }
 
+.testimonials-container p {
+    margin-left: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+/* .testimonials-container p::before {
+    content:"“";
+    height: 6rem;
+    font-size: 8rem;
+    color: red;
+    position: absolute;
+    left: 10rem;
+    top: -1.5rem;
+    z-index: 1;
+} */
+
+/* .testimonials-container p::after {
+    content:"”";
+    height: 2rem;
+    font-size: 4rem;
+    color: black;
+    position: absolute;
+    right: 0;
+    bottom: 2.5rem;
+} */
+
 .testimonials-container svg {
     width: 30px;
 }
@@ -40,18 +66,33 @@ body{
     position: absolute;
     top: 0; 
     left: 0;
+    z-index: 100;
     transition: all 1s;
     align-items: center;
 }
 
 .underline{
     width: 6rem;
-    height: 0.25rem;
+    height: 0.30rem;
     background: black;
-    /* margin-top: 0.5rem; */
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
+    position: relative;
 }
+
+/* underline with angled edges */
+.underline::before{
+    width: 0.5rem;
+    height: 0.30rem;
+    background: black;
+    transform: skewX(-30deg);
+    position: absolute;
+    display: block;
+    content: "";
+    top:0;
+    left:-0.4rem;
+}
+
 
 
 .bullets-container {
