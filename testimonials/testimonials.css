@@ -57,7 +57,7 @@ body{
 }
 
 .testimonial-card{
-    background-color: #e2c0b2;
+    background-color: #e7e5dd;
     font-weight: lighter;
     border-radius: 10px;
     padding: 1rem;
@@ -74,7 +74,7 @@ body{
 .underline{
     width: 6rem;
     height: 0.30rem;
-    background: black;
+    background:  #7FD1AE;;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -84,7 +84,7 @@ body{
 .underline::before{
     width: 0.5rem;
     height: 0.30rem;
-    background: black;
+    background:  #7FD1AE;;
     transform: skewX(-30deg);
     position: absolute;
     display: block;
@@ -117,6 +117,25 @@ body{
 }
 
 .current-bullet{
-    background-color: #e2c0b2;
+    background-color: #b3ac8f;
 }
 
+@media only screen and (min-width: 750){
+    .underline{
+        width: 6rem;
+        height: 0.30rem;
+    }
+    
+    /* underline with angled edges */
+    .underline::before{
+        width: 0.5rem;
+        height: 0.33rem;
+        background:  #7FD1AE;;
+        transform: skewX(-30deg);
+
+    }
+}
+
+@media only screen and (min-width: 934){
+
+}

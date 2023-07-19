@@ -113,12 +113,15 @@ h3{
 
 .footer{
     min-height: 60px;
-    background-color: #7FD1AE;
+    background-color: #e7e5dd;
     padding-left: 1rem;
+    font-weight: lighter;
+    font-size: 0.8rem;
+    margin-top: 2rem;
 }
 
 .fa {
-    padding: 10px;
+    padding: 8px;
     font-size: 25px;
     width: 35px;
     text-align: center;
@@ -130,10 +133,20 @@ h3{
 }
 
 .fa-linkedin {
-    background: #007bb5;
+    background: black;
     color: white;
+}
+
+.fa .fa-linkedin{
+    padding: 5px;
 }
 
 .fa-github{
     color: black;
+}
+
+@media only screen and (min-width: 934){
+    .footer{
+        margin-top: 2rem;
+    }
 }
