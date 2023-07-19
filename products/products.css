@@ -82,17 +82,20 @@ img{
     font-weight: bold;
     cursor: pointer;
     border-radius: 4px;
-    background: transparent;
+    background: #E89A43;
     border: 2px solid #E89A43;
     box-shadow: 2px 2px 1px 1px #999;
+    color: rgb(35, 35, 76);;
 }
 .add-btn:active{
-    transform: scale(0.98);
+    background-color: #de8d32;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 
 .add-btn:hover{
     background: #E89A43;
-    color: white;
+    color: rgb(6, 6, 29);;
     outline: none;
 }
 
