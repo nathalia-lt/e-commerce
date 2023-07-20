@@ -79,7 +79,7 @@ img{
 .add-btn{
     margin-top: 0.4rem;
     padding: 0.5rem 1rem;
-    font-weight: bold;
+    word-spacing: 0.1rem;
     cursor: pointer;
     border-radius: 4px;
     background: #E89A43;
@@ -94,8 +94,8 @@ img{
 }
 
 .add-btn:hover{
-    background: #E89A43;
-    color: rgb(6, 6, 29);;
+    background: #f39222;
+    color: #ffff;;
     outline: none;
 }
 
@@ -108,7 +108,7 @@ img{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: 2.5rem;
 }
 
 .announcement{
@@ -204,7 +204,6 @@ img{
     border: 1px solid #E89A43;
     cursor: pointer;
     line-height: 1.15;
-    font-weight: lighter;
     text-decoration: none;
     box-shadow: 2px 2px 1px 1px #999;
 }
@@ -228,6 +227,7 @@ img{
     .announcement-subtitle{
         text-align: center;
         line-height: 1.5;
+        font-size: 1.3rem;
     }
 }
 

@@ -1,5 +1,8 @@
 import categoriesImages from './data.js'
 
+const countItems = document.getElementById('cart-item-count')
+const addedItemToCart = new CustomEvent('add-item-to-cart')
+
     let cart = null
     //eu to recebendo o obj do app e colocando na variavel cart
     function setCart(obj){
@@ -24,17 +27,20 @@ import categoriesImages from './data.js'
     }
     
     function productsRender(allProducts, random=true){
-        const productsToRender = random ? randomItems(allProducts) : allProducts
+        
+        const filteredProducts = allProducts.filter(item => item.category !== 'electronics')
+        const productsToRender = random ? randomItems(filteredProducts) : filteredProducts
         const productsContainer = document.getElementById('products-container')
         productsToRender.forEach(product => {
             productsContainer.innerHTML += productTemplate(product)
         })
         //a funcao que esta dentro vai ser chamada depois do tempo.
         setTimeout(addEventListenerToCartBtns, 50)             
-        }
+    }
     
     function productsRenderCartPage(cartItems){
-        const productsContainer = document.getElementById('products-container')
+        console.log(cartItems)
+        const productsContainer = document.getElementById('cart-products-container')
         cartItems.forEach(product => {
             productsContainer.innerHTML += productTemplateCartPage(product)
         })
@@ -76,15 +82,15 @@ import categoriesImages from './data.js'
             const btnsAddCart = document.querySelectorAll('.add-btn')
             btnsAddCart.forEach(btnAddCart => {
                 btnAddCart.addEventListener('click', () => {
+                    console.log(countItems)
+
                     //eu coloco o data set pq eu to enviando todos os datas que tem no no meu button, os tres pontinhos desestrutura meus dados e manda em formato de the key value
                     cart.addItem({...btnAddCart.dataset})
+                    countItems.dispatchEvent(addedItemToCart)
                 })
             })
     }
     
-
-
-
     
     function randomItems(list, quantity = 4){
         const size = list.length

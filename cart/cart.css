@@ -50,5 +50,61 @@ img{
     line-height: 1.5;
 }
 
+.cart-modal {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    padding-bottom: 3rem;
+    line-height: 3rem;
+    /*  transfomr used to hide the menu by default */
+    /* y- sobe desce, x- direito e esquerdo */
+    /* menos e pra cima,estou subindo 100 */
+    transform: translateX(100%);
+    /* used to animate the change in translation value and create a slide up/down effect */
+    transition: transform ease-in-out 0.5s;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    background:  #e9e7e0;
+    color: white;
+    list-style: none;
+    padding-top: 4rem;
+    overflow-y: auto;
+}
 
-
+ .cart-btn{
+     display: flex;
+     justify-content: end;
+     align-content: end;
+     width: 2rem;
+     height: auto;
+     /* position fixex, so scrolling wont affect it */
+     position: fixed;
+     /* z-index to make sure it stays above avery other element */
+     z-index: 10001;
+     /* top and right, to add it to the top right corner */
+     top: 1rem;
+     right: 1rem;
+     transition: all ease-in-out 0.5s;
+     /* transition-delay: 0.1s; */
+     color: black;
+     /* font-weight: 800; */
+     /* padding: 4px; */
+     border: none;
+     cursor: pointer;
+ }
+    
+    
+    /* To hide the close icon by default, add display: none; to the closeIcon class */
+    
+    
+.closeIcon {
+    display: none;
+}
+    
+    /* This class below will be added and removed from the menu with Javascript to show and hide the menu. */
+    
+.show-cart{
+            /* By resetting translateY to 0, the menu will slide down and cover the whole screen */
+        transform: translateX(0);
+    }

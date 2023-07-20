@@ -18,7 +18,6 @@ console.log(products)
 //     }
 // ]
 
-//coloquei product no plural
 function addItem(product) {
     // add items to products list
     //verificar se o produto com aquele id ja existe
@@ -40,6 +39,13 @@ function addItem(product) {
     // update localstorage
 }
 
+function countItems(){
+    const count = products.reduce((acc, item) => {
+        return acc + item.quantity
+    }, 0)
+    return count
+}
+
 function removeItem(product) {
     // remove items from products list
     // update localstorage
@@ -56,7 +62,8 @@ let cart = {
     addItem,
     removeItem,
     clearCart,
-    getItems
+    getItems,
+    countItems
 }
 
 export default cart
