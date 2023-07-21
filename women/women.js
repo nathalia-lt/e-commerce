@@ -17,18 +17,15 @@ async function women(){
     }
 }
 
-
-//tenho que arrumar os dados do meu botao
     function womenTemplate(product){
         return `<div class="women-card">
         <img src="${product.image}" alt='${product.name}' />
         <div class="wrapper">
-        <p class="description">${product.title}</p>
-        <p class="rating">${product.rating.rate} ⭐</p>
-        <p class="price">$: ${product.price}</p>
-        <button id="${product.id}" class="add-btn" data-id="${product.id}   "data-image="${product.image}" data-title="${product.title}" data-price="${product.price}">Add to Cart
-        </button>
+            <p class="description">${product.title}</p>
+            <p class="rating">${product.rating.rate} ⭐</p>
+            <p class="price">$: ${product.price}</p>
         </div>
+        <button class="add-btn">Add to Cart</button>
     </div>`
     }
 

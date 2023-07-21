@@ -22,8 +22,8 @@ function menTemplate(menProduct){
     <p class="description">${menProduct.title}</p>
     <p class="rating">${menProduct.rating.rate} ⭐</p>
     <p class="price">$: ${menProduct.price}</p>
-    <button class="add-btn">Add to Cart</button>
     </div>
+    <button class="add-btn">Add to Cart</button>
 </div>`
 }
 

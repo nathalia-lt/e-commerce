@@ -16,14 +16,14 @@ async function accessories(){
 }
 
 function jeweleryTemplate(jeweleryProduct){
-    return `<div class="jewelery-card">
+    return `<div class="jew-card">
     <img width="40px" src="${jeweleryProduct.image}" alt='${jeweleryProduct.name}' />
     <div class="wrapper">
-    <p class="title">${jeweleryProduct.title}</p>
-    <p class="rating">${jeweleryProduct.rating.rate} ⭐</p>
-    <p class="price">$: ${jeweleryProduct.price}</p>
-    <button class="add-btn">Add to Cart</button>
+        <p class="title">${jeweleryProduct.title}</p>
+        <p class="rating">${jeweleryProduct.rating.rate} ⭐</p>
+        <p class="price">$: ${jeweleryProduct.price}</p>
     </div>
+    <button class="add-btn">Add to Cart</button>
 </div>`
 }
 

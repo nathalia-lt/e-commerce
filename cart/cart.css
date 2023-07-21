@@ -15,8 +15,10 @@ p {
     color: black
 }
 
-.cart-modal h4 {
+.cart-modal h3 {
     text-align: left;
+    padding-left: 1rem;
+    font-weight:400;
 }
 
 img {
@@ -92,7 +94,7 @@ img {
 
 .wrapper-btn {
     display: flex;
-    padding: 2px 10px;
+    padding: 2px 8px;
     background-color: #7FD1AE;
     border-radius: 2px;
 }
@@ -120,11 +122,13 @@ img {
     padding: 2px 2px;
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 .decrease-btn{
     padding: 2px 2px;
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 
 .description {

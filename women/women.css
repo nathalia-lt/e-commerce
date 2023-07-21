@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: "Source Sans Pro",sans-serif;
 }
 html, body{
     background-color: #eeede8;
@@ -14,6 +15,11 @@ p{
     padding: 0.2rem;
 }
 
+h1{
+    padding-top: 1rem;
+    padding-bottom: 0.4rem;
+}
+
 .products-container{
     width: 90%;
     margin: 3rem auto;
@@ -22,21 +28,54 @@ p{
     flex-wrap: wrap;
 }
 
+header{
+    width: 100%;
+    min-height: 80px;
+    background-color: #eeede8;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    padding-left: 2rem;
+}
 
-/* como faco para deixar todos os cards do mesmo tamanho, mesmo em tela cheia. como centralizar a imagem */
+.underline{
+    width: 6rem;
+    height: 0.30rem;
+    background:  #7FD1AE;;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    
+}
+
+/* underline with angled edges */
+.underline::before{
+    width: 0.5rem;
+    height: 0.30rem;
+    background:  #7FD1AE;;
+    transform: skewX(-30deg);
+    position: absolute;
+    display: block;
+    content: "";
+    top:0;
+    left:-0.4rem;
+}
+
+
+
 .women-card{
         /* mobile firt mobile tem que ocupar 100%, nesse caso */
         width: 90%;
         /* max-width: 250px;  coloco esse no media query*/
-        max-width: 160px;
+        max-width: 150px;
         height: auto;
         display: flex;
         flex-direction: column;
         margin: 1rem auto;
         padding: 0.5rem;
-        border: 1px solid #E89A43;
+        border: 1px solid black;
         border-radius: 8px;
-        /* margin: 1rem; */
         padding: 1rem;
         align-items: center;
         gap: 1rem;
@@ -44,18 +83,21 @@ p{
 }
 
 .add-btn{
-    margin: auto;
-    margin-top: 2rem;
+    margin-top: 0.4rem;
     padding: 0.5rem 1rem;
-    font-weight: bold;
+    word-spacing: 0.1rem;
     cursor: pointer;
     border-radius: 4px;
-    background: transparent;
+    background: #E89A43;
     border: 2px solid #E89A43;
     box-shadow: 2px 2px 1px 1px #999;
+    color: rgb(35, 35, 76);;
 }
+
 .add-btn:active{
-    transform: scale(0.98);
+    background-color: #de8d32;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 
 .add-btn:hover{
@@ -66,14 +108,14 @@ p{
 
 .wrapper{
     padding-top: 0.5rem;
-    flex: 1;
+    line-height: 1.5;
+    flex-grow: 1;
 }
 
 .description{
     font-size: 1rem;
     font-weight: lighter;
     line-height: 1.5;
-    flex-grow: 1;
 }
 
 
@@ -88,30 +130,22 @@ img:hover {
     transform: rotate(10deg);
 }
 
-.add-btn,
-.title,
-.rating,
-.price{
-    text-align: center;
-}
-
-
 
 @media only screen and (min-width: 600px){
     .women-card{
-        max-width: 280px;
+        max-width: 200px;
     }
 }
 
-/* divide pelo o numero de caets que eu quero que apareca na tela */
+/* divide pelo o numero de carts que eu quero que apareca na tela */
+
+
 @media only screen and (min-width: 1200px){
     .women-card{
-        max-width: 380px;
+        max-width: 250px;
     }
-}
-
-@media only screen and (max-width: 1200px){
-    .women-card{
-        max-width: 380px;
+h1{
+    padding-top: 2rem;
+    padding-bottom: 0.5;
     }
 }
