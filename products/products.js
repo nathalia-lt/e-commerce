@@ -50,12 +50,16 @@ const addedItemToCart = new CustomEvent('add-item-to-cart')
         const total = parseFloat(product.quantity * product.price).toFixed(2)
 
         return`
-        <div class="product-card">
-            <img width="40px" src="${product.image}" alt='${product.title}' />
+        <div class="product-card-cart">
+        <div class="wrapper">
+            <img width="40px" src="${product.image}" alt='${product.title}'/>
             <p>${product.title}</p>
-            <p>$: ${product.price}</p>
-            <p>Qauntity:${product.quantity}</p>
+        </div>
+        <div class="wrapper-info-cart">
+            <p>$:${product.price}</p>
+            <p>Quantity: ${product.quantity}</p>
             <p>Total: $ ${total}</p>
+            </div>
         </div>`
     } 
     

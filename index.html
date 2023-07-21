@@ -15,17 +15,17 @@
 </head>
 <body>
     <header id="header" class="header"> 
-        
+        <h1 class="title">E-com</h1>
         <!-- cart menu -->
         <!-- preciso de um container para receber a a class show cart -->
-    <div id="cart-modal" class="cart-modal">
-        <!-- items do menu -->
-        <section id="cart-products-container"  class="products-container">
-        
-        </section>
-    </div>
-        <p class="title">e-com</p>
+        <div id="cart-modal" class="cart-modal">
+            <h3>My Cart</h3>
 
+            <!-- items do menu -->
+            <section id="cart-products-container"  class="products-container">
+                
+            </section>
+        </div>        
         <!-- cart modal-->
         <div id="cart-container" class="cart-container" >
             <button id="cart-btn" class="cart-btn">
@@ -38,29 +38,27 @@
                 <span id="cart-item-count" class="cart-item-count">0</span>
             </button>
         </div>
-        <!-- Do I need to add a modal if I dont want to display it in the whole page? I have added the close button in the modal container -->
     </header>
+
     <main>
-        <!-- hero title ou carrossel de destaque de produtos-->
-        <!-- TODO -->
+        <!-- hero image-->
         <div class="hero-image">
             <div class="hero-text">
                 <h2>New Arrivals</h2>
-                <a href="#categories-container" class="shop-btn">Shop Now</a>
+                <a href="#show-case-wrapper" class="shop-btn">Shop Now</a>
             </div>
         </div>
         <!-- produtos em destaque na forma de card-->
         <section id="products-container"  class="products-container"></section>
         
-        <!-- cards -->
-        <section class="show-case-wrapper">
+        <!-- special section -->
+        <section id="show-case-wrapper" class="show-case-wrapper">
             <div id="announcement" class="announcement">
                 <p class="announcement-title">Special</p>
                 <p class="announcement-subtitle">
                     Check our new collection out!!
                 </p>
             </div>
-        <!-- quero substituir os icons por essas imagens, tenho que colocar dentro do categories section -->
 
             <div class="featured-wrapper">
                 <div class="featured-left-container">
@@ -92,25 +90,21 @@
                     </div>
                 </div>
             </div>
-        </section> <!-- end of cards -->
+        </section> 
 
-        <!--testimonials  -->
+        <!--testimonials section -->
         <h3>What Our Customers Say</h3>
         <div class="underline"></div>
-        <section id="bullets-container" class="bullets-container">
-            
+        <section id="bullets-container" class="bullets-container">    
         </section>
         <section id="testimonials-container" class="testimonials-container">
         </section>
-        
 
-        <!-- carossel -->
+
+        <!-- footer -->
         <footer id="footer" class="footer">Find out more
-
             <a class="social-icon"  href="https://github.com/nathalia-lt/e-commerce" target="_blank"><i class="fa fa-github"></i></a>
-
             <a class="social-icon" href="https://www.linkedin.com/in/nathaliatroina/" target="_blank"><i class="fa fa-linkedin"></i></a>
-        
         </footer>
     </main>
     <script type="module" src="./app.js"></script>

@@ -16,7 +16,6 @@ body{
     display: flex;
 }
 
-
 img{
     width: 80px;
     height: 100px;
@@ -103,6 +102,7 @@ img{
 /* mudar no media, display flex, no announcemtn max-widdth, flex 1, fetuare-wrapper flex 2 */
 .show-case-wrapper{
     width: 100vw;
+    /* margin-top: 2rem; */
     background-color: #e7e5dd;
     display:flex;
     flex-direction: column;

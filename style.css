@@ -14,8 +14,6 @@ body{
 }
 
 .title{
-    font-size: 1.3rem;
-    text-align: center;
     padding-top: 1rem;
     margin: auto;
 }
@@ -43,6 +41,11 @@ h3{
     background-color: #eeede8;
     display: flex;
     justify-content: space-between;
+}
+
+.cart-container{
+    display: flex;
+    align-items: flex-end;
 }
 
 .hero-image{
