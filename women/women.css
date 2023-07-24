@@ -8,6 +8,7 @@ html, body{
     background-color: #eeede8;
     width: 100%;
     min-height: 100vh;
+    font-family: 18px;
 }
 
 p{
@@ -130,6 +131,47 @@ img:hover {
     transform: rotate(10deg);
 }
 
+.footer{
+    min-height: 60px;
+    background-color: #e7e5dd;
+    padding-left: 1rem;
+    font-weight: lighter;
+    font-size: 0.8rem;
+    margin-top: 2rem;
+}
+
+.fa {
+    padding: 8px;
+    font-size: 25px;
+    width: 35px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+.fa:hover {
+    cursor: pointer;
+}
+
+.fa-linkedin {
+    background: black;
+    color: white;
+}
+
+.fa .fa-linkedin{
+    padding: 5px;
+}
+
+.fa-github{
+    color: black;
+    width: 35px;;
+}
+
+@media only screen and (min-width: 934){
+    .footer{
+        margin-top: 2rem;
+    }
+}
+
 
 @media only screen and (min-width: 600px){
     .women-card{
@@ -147,5 +189,14 @@ img:hover {
 h1{
     padding-top: 2rem;
     padding-bottom: 0.5;
+    }
+    .fa {
+        padding: 15px;
+        font-size: 25px;
+        width: 40px;
+    }
+    .fa-github{
+        color: black;
+        width: 40px;;
     }
 }
