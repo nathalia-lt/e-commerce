@@ -28,7 +28,7 @@ img {
     transition: 0.5s;
 }
 
-.products-container {
+.cart-products-container {
     width: 90%;
     margin: 3rem auto;
     display: flex;
@@ -37,7 +37,7 @@ img {
 }
 
 
-.cart-modal .products-container {
+.cart-modal .cart-products-container {
     /* mobile firt mobile tem que ocupar 100%, nesse caso */
     width: 90%;
     max-width: 450px;

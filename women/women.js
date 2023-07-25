@@ -1,75 +1,30 @@
-import http from "../services/httpService.js";
-import products from "../products/products.js";
-import cart from "../cart/cart-model.js";
+import http from "../_src/services/httpService.js";
+import products from "../_src/products/products.js";
+import header from '../_src/partials/header.js'
+import cart from '../_src/cart/cart-model.js'
+import cartView from '../_src/cart/cartView.js'
 
 
-async function women(){
-    // encodeURI, e usado para juntar os espacos que tem nesse http
-    try{
-        const womenProducts = await http.getAll(encodeURI("https://fakestoreapi.com/products/category/women's clothing"))
-        //products.productsRender(womenProducts, false)
-        // pq eu tive que colocar o womenProducts como parametro? da onde ele veio? 
-        //ja devo ter perguntado mas pq tenho que chamar essa funcao aqui dentro?
-        console.log(womenProducts)
-        womenRender(womenProducts, false)
-    } catch (error) {
-        console.log(error.message);
-    }
+async function women() {
+
+    const headerContainer = document.querySelector('header')
+    headerContainer.innerHTML = header()
+    
+    setTimeout(async () => {
+        cartView.init(products, cart)
+        products.setCart(cart)
+        // encodeURI, e usado para juntar os espacos que tem nesse http
+        try {
+            const womenProducts = await http.getAll(encodeURI("https://fakestoreapi.com/products/category/women's clothing"))
+            // products.productsRender(menProducts, false)
+            console.log(womenProducts)
+            products.productsRenderCategoryPage(womenProducts, 'women')
+    
+        } catch (error) {
+            console.log(error.message);
+        }
+    }, 100)
 }
-
-    function womenTemplate(product){
-        return `<div class="women-card">
-        <img src="${product.image}" alt='${product.name}' />
-        <div class="wrapper">
-            <p class="description">${product.title}</p>
-            <p class="rating">${product.rating.rate} ⭐</p>
-            <p class="price">$: ${product.price}</p>
-        </div>
-        <button class="add-btn">Add to Cart</button>
-    </div>`
-    }
-
-
-    function womenRender(womenProducts){
-        const womenContainer = document.getElementById('products-container')
-        console.log(womenProducts)
-        womenProducts.forEach(product => {
-            womenContainer.innerHTML += womenTemplate(product)
-        });
-        //eu preciso colocar o settime out aqui?
-        //eu quero alterar o css do womemTemplate
-        setTimeout(addEventListenerToBtn, 50);
-    }
-
-
-    function addEventListenerToBtn(){
-         //pego o nodelist dos meus botoes e adiciono em cada botao o evento.
-        const addBtns = document.querySelectorAll('.add-btn')
-        console.log(addBtns)
-        addBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // { } => estamos criando um objeto
-                // dataset => é um objeto que contem todos os atributos data-*
-                // ...dataset => estamos espalhando todos os atributos do objeto dataset
-                // id = ....
-                // image = ....
-                // title = ....
-                // price = ....
-                // {...dataset} => estamos criando um objeto com os atributos que estavam no dataset
-                // {
-                //     id: ....,
-                //     image: ....,
-                //     title: ....,
-                //     price: ....
-                // }
-
-
-                // [...dataset] => estamos criando um array com os atributos que foram espalhados a partir do dataset
-                console.log(btn.dataset)
-                cart.addItem({...btn.dataset})
-            })
-        })
-    }
 
 
 women()
