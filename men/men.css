@@ -129,6 +129,39 @@ img:hover {
     transform: rotate(10deg);
 }
 
+/* cart button */
+
+.cart-icon{
+    width: 1.6rem;
+    color: black;
+}
+
+.cart-btn{
+    position: absolute;
+    right: 1%;
+    margin-top: 1.5rem;
+    margin-right: 0.9rem;
+    /* margin: 0.5rem; */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.cart-item-count{
+    position: absolute;
+    top: -0.85rem;
+    right: -0.85rem;
+    width: 1.60rem;
+    height: 1.60rem;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: bold;
+    background: #7FD1AE;
+    display: grid;
+    place-items: center;
+}
+
+
 .footer{
     min-height: 60px;
     background-color: #e7e5dd;
