@@ -21,14 +21,6 @@ h1{
     padding-bottom: 0.4rem;
 }
 
-.products-container{
-    width: 90%;
-    margin: 3rem auto;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
 header{
     width: 100%;
     min-height: 80px;
@@ -39,6 +31,7 @@ header{
     align-items: center;
     padding-left: 2rem;
 }
+
 
 .underline{
     width: 6rem;
@@ -64,13 +57,20 @@ header{
 }
 
 
+.products-container{
+    width: 90%;
+    margin: 3rem auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
 
 .women-card{
-        /* mobile firt mobile tem que ocupar 100%, nesse caso */
-        width: 90%;
-        /* max-width: 250px;  coloco esse no media query*/
-        max-width: 150px;
+    /* mobile firt mobile tem que ocupar 100%, nesse caso */
+    width: 90%;
+    /* max-width: 250px;  coloco esse no media query*/
+    max-width: 150px;
         height: auto;
         display: flex;
         flex-direction: column;
@@ -95,7 +95,6 @@ header{
     box-shadow: 2px 2px 1px 1px #999;
     color: rgb(35, 35, 76);;
 }
-
 .add-btn:active{
     background-color: #de8d32;
     box-shadow: 0 5px #666;

@@ -26,7 +26,6 @@ async function women() {
     }, 100)
 }
 
-
 women()
 
 

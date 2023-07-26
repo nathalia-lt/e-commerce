@@ -64,7 +64,7 @@ header{
 }
 
 
-.jew-card{
+.jewelery-card{
     width: 90%;
     max-width: 150px;
     height: auto;
@@ -167,23 +167,21 @@ img:hover {
     }
 }
 
-
-
 @media only screen and (min-width: 600px){
-    .jew-card{
+    .jewelery-card{
         max-width: 280px;
     }
 }
 
 /* divide pelo o numero de carts que eu quero que apareca na tela */
 @media only screen and (min-width: 700px){
-    .jew-card{
+    .jewelery-card{
         max-width: 200px;
     }
 }
 
 @media only screen and (min-width: 1200px){
-    .jew-card{
+    .jewelery-card{
         max-width: 250px;
     }
     h1{
